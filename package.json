@@ -1,0 +1,27 @@
+{
+  "name": "bacon.nodestream",
+  "version": "0.0.0",
+  "description": "a node.js streams plugin for bacon.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/holonomy/bacon.nodestream.git"
+  },
+  "author": "ahdinosaur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holonomy/bacon.nodestream/issues"
+  },
+  "dependencies": {
+    "baconjs": "*"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "readable-stream": "~1.0.26",
+    "split": "~0.3.0"
+  }
+}
