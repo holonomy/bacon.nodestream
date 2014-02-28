@@ -15,12 +15,13 @@
   "bugs": {
     "url": "https://github.com/holonomy/bacon.nodestream/issues"
   },
-  "dependencies": {
-    "baconjs": "*"
+  "peerDependencies": {
+    "baconjs": "0.7.x"
   },
   "devDependencies": {
     "chai": "~1.9.0",
     "mocha": "~1.17.1",
+    "baconjs": "0.7.x",
     "readable-stream": "~1.0.26",
     "split": "~0.3.0"
   }
