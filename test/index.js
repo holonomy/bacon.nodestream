@@ -29,8 +29,10 @@ describe('#Bacon.fromNodeStream', function () {
   });
 
   it("should work for file stream split on lines", function (done) {
-    var nodeStream =
-      fs.createReadStream(__dirname + '/file.txt', { encoding: "utf8" });
+    var nodeStream = fs.createReadStream(
+      __dirname + '/file.txt',
+      { encoding: 'utf8' }
+    );
 
     var eventStream = Bacon.fromNodeStream(nodeStream)
     .flatMap(function (str) {
@@ -49,9 +51,11 @@ describe('#Bacon.fromNodeStream', function () {
   });
 
   it("should work for line stream", function (done) {
-    var nodeStream =
-      fs.createReadStream(__dirname + '/file.txt', { encoding: "utf8" })
-      .pipe(split());
+    var nodeStream = fs.createReadStream(
+      __dirname + '/file.txt',
+      { encoding: 'utf8' }
+    )
+    .pipe(split());
 
     var eventStream = Bacon.fromNodeStream(nodeStream);
     var lines = collect(eventStream);

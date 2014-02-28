@@ -8,7 +8,22 @@ a [node.js streams](https://github.com/substack/stream-handbook) plugin for baco
 
 ## usage
 
-```
+```javascript
+var fs = require('fs');
+var split = require('split');
+var Bacon = require('bacon.nodestream');
+
+var nodeStream = fs.createReadStream(
+  __dirname + '/test/file.txt',
+  { encoding: 'utf8' }
+)
+.pipe(split());
+
+Bacon.fromNodeStream(nodeStream)
+.onValue(function (line) {
+  // do something for each line
+  console.log(line);
+});
 ```
 
 ## test
